@@ -11,13 +11,8 @@ app.get("/message/:id/:user", (request, response) => {
   `)
 })
 
-app.get("/users", (request, response) => {
-  const { page, limit } = request.params
-
-  response.send(`
-    Página: ${page}.
-    Mostrar: ${limit}.
-  `)
+app.post("/users", (request, response) => {
+  response.send(`Você chamou o Post`)
 })
 
 const PORT = 3333
